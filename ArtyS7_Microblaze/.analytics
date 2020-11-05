@@ -1,0 +1,10 @@
+timestamp=[2020-11-04 18:48:57], mode=WORKBENCH_START, duration=0:01:32.462, duration_ms=92462, data={}
+timestamp=[2020-11-04 18:49:46], mode=WORKBENCH_UI_INIT, duration=0:00:48.864, duration_ms=48864, data={editors_count=0, platform_editors_count=0, projects_count=0, platform_projects_count=0, active_platform_editor=false, projects=}
+timestamp=[2020-11-04 18:50:37], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:46.245, duration_ms=46245, data={}
+timestamp=[2020-11-04 18:53:09], mode=APP_CREATION, duration=0:00:37.175, duration_ms=37175, data={name=Hello_World, project_type=sdk, os=standalone, processor=microblaze, runtime=cpp, platform=design_1_wrapper, application_type=application}
+timestamp=[2020-11-04 18:57:08], mode=PLATFORM_GENERATION, duration=0:00:45.173, duration_ms=45173, data={name=design_1_wrapper}
+timestamp=[2020-11-04 18:57:11], mode=BUILD, duration=0:00:03.247, duration_ms=3247, data={name=Hello_World, configuration=Debug, clean_build=false}
+timestamp=[2020-11-04 19:21:13], mode=APP_CREATION, duration=0:00:09.659, duration_ms=9659, data={name=HelloE14, project_type=sdk, os=standalone, processor=microblaze_0, runtime=C/C++, platform=design_1_wrapper, application_type=application}
+timestamp=[2020-11-04 20:07:29], mode=WORKBENCH_START, duration=0:06:11.776, duration_ms=371776, data={}
+timestamp=[2020-11-04 20:07:37], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:02.193, duration_ms=2193, data={}
+timestamp=[2020-11-04 20:07:38], mode=WORKBENCH_UI_INIT, duration=0:00:08.658, duration_ms=8658, data={editors_count=6, platform_editors_count=0, projects_count=6, platform_projects_count=1, active_platform_editor=false, projects=HelloE14,HelloE14_system,Hello_World,Hello_World_system,RemoteSystemsTempFiles,design_1_wrapper}

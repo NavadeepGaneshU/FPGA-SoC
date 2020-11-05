@@ -1,0 +1,412 @@
+18:49:48 INFO  : Launching XSCT server: xsct.bat -n  -interactive E:\Xilinx\Projects\ArtyS7_Workshop1\temp_xsdb_launch_script.tcl
+18:50:05 INFO  : Registering command handlers for Vitis TCF services
+18:50:28 INFO  : XSCT server has started successfully.
+18:50:37 INFO  : Platform repository initialization has completed.
+18:51:22 INFO  : plnx-install-location is set to ''
+18:51:22 INFO  : Successfully done query RDI_DATADIR 
+18:51:22 INFO  : Successfully done setting XSCT server connection channel  
+18:51:22 INFO  : Successfully done setting workspace for the tool. 
+18:52:58 INFO  : Result from executing command 'getProjects': design_1_wrapper
+18:52:58 INFO  : Result from executing command 'getPlatforms': 
+18:52:59 INFO  : Platform 'design_1_wrapper' is added to custom repositories.
+18:53:09 INFO  : Platform 'design_1_wrapper' is added to custom repositories.
+18:57:01 INFO  : Result from executing command 'getProjects': design_1_wrapper
+18:57:01 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|E:/Xilinx/Projects/ArtyS7_Workshop1/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm
+18:57:08 INFO  : Checking for BSP changes to sync application flags for project 'Hello_World'...
+19:05:43 INFO  : Bit file 'E:/Xilinx/Projects/ArtyS7_Workshop1/Hello_World/_ide/bitstream/download.bit' is generated.
+19:05:54 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:06:06 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty S7 - 50 210352A6C69CA" && level==0 && jtag_device_ctx=="jsn-Arty S7 - 50-210352A6C69CA-0362f093-0"}' command is executed.
+19:06:08 INFO  : FPGA configured successfully with bitstream "E:/Xilinx/Projects/ArtyS7_Workshop1/Hello_World/_ide/bitstream/download.bit"
+19:08:59 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:09:00 INFO  : Jtag cable 'Digilent Arty S7 - 50 210352A6C69CA' is selected.
+19:09:00 INFO  : 'jtag frequency' command is executed.
+19:09:00 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty S7 - 50 210352A6C69CA" && level==0 && jtag_device_ctx=="jsn-Arty S7 - 50-210352A6C69CA-0362f093-0"}' command is executed.
+19:09:02 INFO  : FPGA configured successfully with bitstream "E:/Xilinx/Projects/ArtyS7_Workshop1/Hello_World/_ide/bitstream/download.bit"
+19:09:02 INFO  : Context for processor 'microblaze_0' is selected.
+19:09:02 INFO  : Hardware design and registers information is loaded from 'E:/Xilinx/Projects/ArtyS7_Workshop1/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+19:09:02 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+19:09:02 INFO  : Context for processor 'microblaze_0' is selected.
+19:09:02 INFO  : System reset is completed.
+19:09:05 INFO  : 'after 3000' command is executed.
+19:09:05 INFO  : Context for processor 'microblaze_0' is selected.
+19:09:05 INFO  : The application 'E:/Xilinx/Projects/ArtyS7_Workshop1/Hello_World/Debug/Hello_World.elf' is downloaded to processor 'microblaze_0'.
+19:09:05 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Arty S7 - 50 210352A6C69CA" && level==0 && jtag_device_ctx=="jsn-Arty S7 - 50-210352A6C69CA-0362f093-0"}
+fpga -file E:/Xilinx/Projects/ArtyS7_Workshop1/Hello_World/_ide/bitstream/download.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw E:/Xilinx/Projects/ArtyS7_Workshop1/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow E:/Xilinx/Projects/ArtyS7_Workshop1/Hello_World/Debug/Hello_World.elf
+----------------End of Script----------------
+
+19:09:06 INFO  : Context for processor 'microblaze_0' is selected.
+19:09:06 INFO  : 'con' command is executed.
+19:09:06 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+19:09:06 INFO  : Launch script is exported to file 'E:\Xilinx\Projects\ArtyS7_Workshop1\.sdk\launch_scripts\single_application_debug\debugger_hello_world-default.tcl'
+19:10:44 INFO  : Disconnected from the channel tcfchan#2.
+19:10:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:10:45 INFO  : Jtag cable 'Digilent Arty S7 - 50 210352A6C69CA' is selected.
+19:10:45 INFO  : 'jtag frequency' command is executed.
+19:10:46 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty S7 - 50 210352A6C69CA" && level==0 && jtag_device_ctx=="jsn-Arty S7 - 50-210352A6C69CA-0362f093-0"}' command is executed.
+19:10:47 INFO  : FPGA configured successfully with bitstream "E:/Xilinx/Projects/ArtyS7_Workshop1/Hello_World/_ide/bitstream/download.bit"
+19:10:47 INFO  : Context for processor 'microblaze_0' is selected.
+19:10:47 INFO  : Hardware design and registers information is loaded from 'E:/Xilinx/Projects/ArtyS7_Workshop1/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+19:10:47 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+19:10:47 INFO  : Context for processor 'microblaze_0' is selected.
+19:10:47 INFO  : System reset is completed.
+19:10:50 INFO  : 'after 3000' command is executed.
+19:10:50 INFO  : Context for processor 'microblaze_0' is selected.
+19:10:50 INFO  : The application 'E:/Xilinx/Projects/ArtyS7_Workshop1/Hello_World/Debug/Hello_World.elf' is downloaded to processor 'microblaze_0'.
+19:10:50 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Arty S7 - 50 210352A6C69CA" && level==0 && jtag_device_ctx=="jsn-Arty S7 - 50-210352A6C69CA-0362f093-0"}
+fpga -file E:/Xilinx/Projects/ArtyS7_Workshop1/Hello_World/_ide/bitstream/download.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw E:/Xilinx/Projects/ArtyS7_Workshop1/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow E:/Xilinx/Projects/ArtyS7_Workshop1/Hello_World/Debug/Hello_World.elf
+----------------End of Script----------------
+
+19:10:51 INFO  : Context for processor 'microblaze_0' is selected.
+19:10:51 INFO  : 'con' command is executed.
+19:10:51 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+19:10:51 INFO  : Launch script is exported to file 'E:\Xilinx\Projects\ArtyS7_Workshop1\.sdk\launch_scripts\single_application_debug\debugger_hello_world-default.tcl'
+19:12:51 INFO  : Disconnected from the channel tcfchan#3.
+19:12:52 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:12:53 INFO  : Jtag cable 'Digilent Arty S7 - 50 210352A6C69CA' is selected.
+19:12:53 INFO  : 'jtag frequency' command is executed.
+19:12:53 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty S7 - 50 210352A6C69CA" && level==0 && jtag_device_ctx=="jsn-Arty S7 - 50-210352A6C69CA-0362f093-0"}' command is executed.
+19:12:54 INFO  : FPGA configured successfully with bitstream "E:/Xilinx/Projects/ArtyS7_Workshop1/Hello_World/_ide/bitstream/download.bit"
+19:12:55 INFO  : Context for processor 'microblaze_0' is selected.
+19:12:55 INFO  : Hardware design and registers information is loaded from 'E:/Xilinx/Projects/ArtyS7_Workshop1/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+19:12:55 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+19:12:55 INFO  : Context for processor 'microblaze_0' is selected.
+19:12:55 INFO  : System reset is completed.
+19:12:58 INFO  : 'after 3000' command is executed.
+19:12:58 INFO  : Context for processor 'microblaze_0' is selected.
+19:12:58 INFO  : The application 'E:/Xilinx/Projects/ArtyS7_Workshop1/Hello_World/Debug/Hello_World.elf' is downloaded to processor 'microblaze_0'.
+19:12:58 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Arty S7 - 50 210352A6C69CA" && level==0 && jtag_device_ctx=="jsn-Arty S7 - 50-210352A6C69CA-0362f093-0"}
+fpga -file E:/Xilinx/Projects/ArtyS7_Workshop1/Hello_World/_ide/bitstream/download.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw E:/Xilinx/Projects/ArtyS7_Workshop1/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow E:/Xilinx/Projects/ArtyS7_Workshop1/Hello_World/Debug/Hello_World.elf
+----------------End of Script----------------
+
+19:12:58 INFO  : Context for processor 'microblaze_0' is selected.
+19:12:58 INFO  : 'con' command is executed.
+19:12:58 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+19:12:58 INFO  : Launch script is exported to file 'E:\Xilinx\Projects\ArtyS7_Workshop1\.sdk\launch_scripts\single_application_debug\debugger_hello_world-default.tcl'
+19:13:14 INFO  : Disconnected from the channel tcfchan#4.
+19:13:15 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:13:15 INFO  : Jtag cable 'Digilent Arty S7 - 50 210352A6C69CA' is selected.
+19:13:15 INFO  : 'jtag frequency' command is executed.
+19:13:16 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty S7 - 50 210352A6C69CA" && level==0 && jtag_device_ctx=="jsn-Arty S7 - 50-210352A6C69CA-0362f093-0"}' command is executed.
+19:13:17 INFO  : FPGA configured successfully with bitstream "E:/Xilinx/Projects/ArtyS7_Workshop1/Hello_World/_ide/bitstream/download.bit"
+19:13:17 INFO  : Context for processor 'microblaze_0' is selected.
+19:13:17 INFO  : Hardware design and registers information is loaded from 'E:/Xilinx/Projects/ArtyS7_Workshop1/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+19:13:17 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+19:13:17 INFO  : Context for processor 'microblaze_0' is selected.
+19:13:17 INFO  : System reset is completed.
+19:13:20 INFO  : 'after 3000' command is executed.
+19:13:20 INFO  : Context for processor 'microblaze_0' is selected.
+19:13:20 INFO  : The application 'E:/Xilinx/Projects/ArtyS7_Workshop1/Hello_World/Debug/Hello_World.elf' is downloaded to processor 'microblaze_0'.
+19:13:20 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Arty S7 - 50 210352A6C69CA" && level==0 && jtag_device_ctx=="jsn-Arty S7 - 50-210352A6C69CA-0362f093-0"}
+fpga -file E:/Xilinx/Projects/ArtyS7_Workshop1/Hello_World/_ide/bitstream/download.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw E:/Xilinx/Projects/ArtyS7_Workshop1/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow E:/Xilinx/Projects/ArtyS7_Workshop1/Hello_World/Debug/Hello_World.elf
+----------------End of Script----------------
+
+19:13:20 INFO  : Context for processor 'microblaze_0' is selected.
+19:13:20 INFO  : 'con' command is executed.
+19:13:20 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+19:13:20 INFO  : Launch script is exported to file 'E:\Xilinx\Projects\ArtyS7_Workshop1\.sdk\launch_scripts\single_application_debug\debugger_hello_world-default.tcl'
+19:14:42 INFO  : Bit file 'E:/Xilinx/Projects/ArtyS7_Workshop1/Hello_World/_ide/bitstream/download.bit' is generated.
+19:14:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:14:46 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty S7 - 50 210352A6C69CA" && level==0 && jtag_device_ctx=="jsn-Arty S7 - 50-210352A6C69CA-0362f093-0"}' command is executed.
+19:14:48 INFO  : FPGA configured successfully with bitstream "E:/Xilinx/Projects/ArtyS7_Workshop1/Hello_World/_ide/bitstream/download.bit"
+19:16:40 INFO  : Disconnected from the channel tcfchan#5.
+19:16:41 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:16:42 INFO  : Jtag cable 'Digilent Arty S7 - 50 210352A6C69CA' is selected.
+19:16:42 INFO  : 'jtag frequency' command is executed.
+19:16:42 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty S7 - 50 210352A6C69CA" && level==0 && jtag_device_ctx=="jsn-Arty S7 - 50-210352A6C69CA-0362f093-0"}' command is executed.
+19:16:43 INFO  : FPGA configured successfully with bitstream "E:/Xilinx/Projects/ArtyS7_Workshop1/Hello_World/_ide/bitstream/download.bit"
+19:16:43 INFO  : Context for processor 'microblaze_0' is selected.
+19:16:43 INFO  : Hardware design and registers information is loaded from 'E:/Xilinx/Projects/ArtyS7_Workshop1/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+19:16:43 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+19:16:43 INFO  : Context for processor 'microblaze_0' is selected.
+19:16:43 INFO  : System reset is completed.
+19:16:46 INFO  : 'after 3000' command is executed.
+19:16:46 INFO  : Context for processor 'microblaze_0' is selected.
+19:16:47 INFO  : The application 'E:/Xilinx/Projects/ArtyS7_Workshop1/Hello_World/Debug/Hello_World.elf' is downloaded to processor 'microblaze_0'.
+19:16:47 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Arty S7 - 50 210352A6C69CA" && level==0 && jtag_device_ctx=="jsn-Arty S7 - 50-210352A6C69CA-0362f093-0"}
+fpga -file E:/Xilinx/Projects/ArtyS7_Workshop1/Hello_World/_ide/bitstream/download.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw E:/Xilinx/Projects/ArtyS7_Workshop1/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow E:/Xilinx/Projects/ArtyS7_Workshop1/Hello_World/Debug/Hello_World.elf
+----------------End of Script----------------
+
+19:16:47 INFO  : Context for processor 'microblaze_0' is selected.
+19:16:47 INFO  : 'con' command is executed.
+19:16:47 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+19:16:47 INFO  : Launch script is exported to file 'E:\Xilinx\Projects\ArtyS7_Workshop1\.sdk\launch_scripts\single_application_debug\debugger_hello_world-default.tcl'
+19:18:32 INFO  : Disconnected from the channel tcfchan#6.
+19:18:33 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:18:34 INFO  : Jtag cable 'Digilent Arty S7 - 50 210352A6C69CA' is selected.
+19:18:34 INFO  : 'jtag frequency' command is executed.
+19:18:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty S7 - 50 210352A6C69CA" && level==0 && jtag_device_ctx=="jsn-Arty S7 - 50-210352A6C69CA-0362f093-0"}' command is executed.
+19:18:35 INFO  : FPGA configured successfully with bitstream "E:/Xilinx/Projects/ArtyS7_Workshop1/Hello_World/_ide/bitstream/download.bit"
+19:18:35 INFO  : Context for processor 'microblaze_0' is selected.
+19:18:35 INFO  : Hardware design and registers information is loaded from 'E:/Xilinx/Projects/ArtyS7_Workshop1/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+19:18:35 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+19:18:35 INFO  : Context for processor 'microblaze_0' is selected.
+19:18:35 INFO  : System reset is completed.
+19:18:38 INFO  : 'after 3000' command is executed.
+19:18:38 INFO  : Context for processor 'microblaze_0' is selected.
+19:18:38 INFO  : The application 'E:/Xilinx/Projects/ArtyS7_Workshop1/Hello_World/Debug/Hello_World.elf' is downloaded to processor 'microblaze_0'.
+19:18:38 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Arty S7 - 50 210352A6C69CA" && level==0 && jtag_device_ctx=="jsn-Arty S7 - 50-210352A6C69CA-0362f093-0"}
+fpga -file E:/Xilinx/Projects/ArtyS7_Workshop1/Hello_World/_ide/bitstream/download.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw E:/Xilinx/Projects/ArtyS7_Workshop1/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow E:/Xilinx/Projects/ArtyS7_Workshop1/Hello_World/Debug/Hello_World.elf
+----------------End of Script----------------
+
+19:18:39 INFO  : Context for processor 'microblaze_0' is selected.
+19:18:39 INFO  : 'con' command is executed.
+19:18:39 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+19:18:39 INFO  : Launch script is exported to file 'E:\Xilinx\Projects\ArtyS7_Workshop1\.sdk\launch_scripts\single_application_debug\debugger_hello_world-default.tcl'
+19:19:40 INFO  : Disconnected from the channel tcfchan#7.
+19:19:41 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:19:42 INFO  : Jtag cable 'Digilent Arty S7 - 50 210352A6C69CA' is selected.
+19:19:42 INFO  : 'jtag frequency' command is executed.
+19:19:42 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty S7 - 50 210352A6C69CA" && level==0 && jtag_device_ctx=="jsn-Arty S7 - 50-210352A6C69CA-0362f093-0"}' command is executed.
+19:19:43 INFO  : FPGA configured successfully with bitstream "E:/Xilinx/Projects/ArtyS7_Workshop1/Hello_World/_ide/bitstream/download.bit"
+19:19:44 INFO  : Context for processor 'microblaze_0' is selected.
+19:19:44 INFO  : Hardware design and registers information is loaded from 'E:/Xilinx/Projects/ArtyS7_Workshop1/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+19:19:44 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+19:19:44 INFO  : Context for processor 'microblaze_0' is selected.
+19:19:44 INFO  : System reset is completed.
+19:19:47 INFO  : 'after 3000' command is executed.
+19:19:47 INFO  : Context for processor 'microblaze_0' is selected.
+19:19:47 INFO  : The application 'E:/Xilinx/Projects/ArtyS7_Workshop1/Hello_World/Debug/Hello_World.elf' is downloaded to processor 'microblaze_0'.
+19:19:47 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Arty S7 - 50 210352A6C69CA" && level==0 && jtag_device_ctx=="jsn-Arty S7 - 50-210352A6C69CA-0362f093-0"}
+fpga -file E:/Xilinx/Projects/ArtyS7_Workshop1/Hello_World/_ide/bitstream/download.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw E:/Xilinx/Projects/ArtyS7_Workshop1/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow E:/Xilinx/Projects/ArtyS7_Workshop1/Hello_World/Debug/Hello_World.elf
+----------------End of Script----------------
+
+19:19:47 INFO  : Context for processor 'microblaze_0' is selected.
+19:19:47 INFO  : 'con' command is executed.
+19:19:47 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+19:19:47 INFO  : Launch script is exported to file 'E:\Xilinx\Projects\ArtyS7_Workshop1\.sdk\launch_scripts\single_application_debug\debugger_hello_world-default.tcl'
+20:03:00 INFO  : Launching XSCT server: xsct.bat -n  -interactive E:\Xilinx\Projects\ArtyS7_Workshop1\temp_xsdb_launch_script.tcl
+20:03:50 INFO  : XSCT server has started successfully.
+20:03:51 INFO  : plnx-install-location is set to ''
+20:03:51 INFO  : Successfully done setting XSCT server connection channel  
+20:03:51 INFO  : Successfully done setting workspace for the tool. 
+20:07:37 INFO  : Platform repository initialization has completed.
+20:07:39 INFO  : Registering command handlers for Vitis TCF services
+20:07:57 INFO  : Successfully done query RDI_DATADIR 
+20:16:38 INFO  : Bit file 'E:/Xilinx/Projects/ArtyS7_Workshop1/HelloE14/_ide/bitstream/download.bit' is generated.
+20:16:46 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:16:53 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty S7 - 50 210352A6C69CA" && level==0 && jtag_device_ctx=="jsn-Arty S7 - 50-210352A6C69CA-0362f093-0"}' command is executed.
+20:16:55 INFO  : FPGA configured successfully with bitstream "E:/Xilinx/Projects/ArtyS7_Workshop1/HelloE14/_ide/bitstream/download.bit"
+20:17:41 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:17:42 INFO  : Jtag cable 'Digilent Arty S7 - 50 210352A6C69CA' is selected.
+20:17:42 INFO  : 'jtag frequency' command is executed.
+20:17:42 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty S7 - 50 210352A6C69CA" && level==0 && jtag_device_ctx=="jsn-Arty S7 - 50-210352A6C69CA-0362f093-0"}' command is executed.
+20:17:44 INFO  : FPGA configured successfully with bitstream "E:/Xilinx/Projects/ArtyS7_Workshop1/HelloE14/_ide/bitstream/download.bit"
+20:17:44 INFO  : Context for processor 'microblaze_0' is selected.
+20:17:44 INFO  : Hardware design and registers information is loaded from 'E:/Xilinx/Projects/ArtyS7_Workshop1/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+20:17:44 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:17:44 INFO  : Context for processor 'microblaze_0' is selected.
+20:17:44 INFO  : System reset is completed.
+20:17:47 INFO  : 'after 3000' command is executed.
+20:17:47 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Arty S7 - 50 210352A6C69CA" && level==0 && jtag_device_ctx=="jsn-Arty S7 - 50-210352A6C69CA-0362f093-0"}
+fpga -file E:/Xilinx/Projects/ArtyS7_Workshop1/HelloE14/_ide/bitstream/download.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw E:/Xilinx/Projects/ArtyS7_Workshop1/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+----------------End of Script----------------
+
+20:17:48 INFO  : Launch script is exported to file 'E:\Xilinx\Projects\ArtyS7_Workshop1\.sdk\launch_scripts\single_application_debug\debugger_helloe14-default.tcl'
+20:18:35 INFO  : Disconnected from the channel tcfchan#1.
+20:18:36 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:18:36 INFO  : Jtag cable 'Digilent Arty S7 - 50 210352A6C69CA' is selected.
+20:18:36 INFO  : 'jtag frequency' command is executed.
+20:18:36 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty S7 - 50 210352A6C69CA" && level==0 && jtag_device_ctx=="jsn-Arty S7 - 50-210352A6C69CA-0362f093-0"}' command is executed.
+20:18:38 INFO  : FPGA configured successfully with bitstream "E:/Xilinx/Projects/ArtyS7_Workshop1/Hello_World/_ide/bitstream/download.bit"
+20:18:38 INFO  : Context for processor 'microblaze_0' is selected.
+20:18:38 INFO  : Hardware design and registers information is loaded from 'E:/Xilinx/Projects/ArtyS7_Workshop1/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+20:18:38 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:18:38 INFO  : Context for processor 'microblaze_0' is selected.
+20:18:38 INFO  : System reset is completed.
+20:18:41 INFO  : 'after 3000' command is executed.
+20:18:42 INFO  : Context for processor 'microblaze_0' is selected.
+20:18:42 INFO  : The application 'E:/Xilinx/Projects/ArtyS7_Workshop1/Hello_World/Debug/Hello_World.elf' is downloaded to processor 'microblaze_0'.
+20:18:42 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Arty S7 - 50 210352A6C69CA" && level==0 && jtag_device_ctx=="jsn-Arty S7 - 50-210352A6C69CA-0362f093-0"}
+fpga -file E:/Xilinx/Projects/ArtyS7_Workshop1/Hello_World/_ide/bitstream/download.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw E:/Xilinx/Projects/ArtyS7_Workshop1/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow E:/Xilinx/Projects/ArtyS7_Workshop1/Hello_World/Debug/Hello_World.elf
+----------------End of Script----------------
+
+20:18:42 INFO  : Context for processor 'microblaze_0' is selected.
+20:18:42 INFO  : 'con' command is executed.
+20:18:42 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:18:42 INFO  : Launch script is exported to file 'E:\Xilinx\Projects\ArtyS7_Workshop1\.sdk\launch_scripts\single_application_debug\debugger_hello_world-default.tcl'
+20:21:22 INFO  : Bit file 'E:/Xilinx/Projects/ArtyS7_Workshop1/Hello_World/_ide/bitstream/download.bit' is generated.
+20:21:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:21:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty S7 - 50 210352A6C69CA" && level==0 && jtag_device_ctx=="jsn-Arty S7 - 50-210352A6C69CA-0362f093-0"}' command is executed.
+20:21:24 INFO  : FPGA configured successfully with bitstream "E:/Xilinx/Projects/ArtyS7_Workshop1/Hello_World/_ide/bitstream/download.bit"
+20:21:35 INFO  : Disconnected from the channel tcfchan#2.
+20:21:36 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:21:36 INFO  : Jtag cable 'Digilent Arty S7 - 50 210352A6C69CA' is selected.
+20:21:36 INFO  : 'jtag frequency' command is executed.
+20:21:36 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty S7 - 50 210352A6C69CA" && level==0 && jtag_device_ctx=="jsn-Arty S7 - 50-210352A6C69CA-0362f093-0"}' command is executed.
+20:21:38 INFO  : FPGA configured successfully with bitstream "E:/Xilinx/Projects/ArtyS7_Workshop1/Hello_World/_ide/bitstream/download.bit"
+20:21:38 INFO  : Context for processor 'microblaze_0' is selected.
+20:21:38 INFO  : Hardware design and registers information is loaded from 'E:/Xilinx/Projects/ArtyS7_Workshop1/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+20:21:38 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:21:38 INFO  : Context for processor 'microblaze_0' is selected.
+20:21:38 INFO  : System reset is completed.
+20:21:41 INFO  : 'after 3000' command is executed.
+20:21:41 INFO  : Context for processor 'microblaze_0' is selected.
+20:21:41 INFO  : The application 'E:/Xilinx/Projects/ArtyS7_Workshop1/Hello_World/Debug/Hello_World.elf' is downloaded to processor 'microblaze_0'.
+20:21:41 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Arty S7 - 50 210352A6C69CA" && level==0 && jtag_device_ctx=="jsn-Arty S7 - 50-210352A6C69CA-0362f093-0"}
+fpga -file E:/Xilinx/Projects/ArtyS7_Workshop1/Hello_World/_ide/bitstream/download.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw E:/Xilinx/Projects/ArtyS7_Workshop1/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow E:/Xilinx/Projects/ArtyS7_Workshop1/Hello_World/Debug/Hello_World.elf
+----------------End of Script----------------
+
+20:21:42 INFO  : Context for processor 'microblaze_0' is selected.
+20:21:42 INFO  : 'con' command is executed.
+20:21:42 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:21:42 INFO  : Launch script is exported to file 'E:\Xilinx\Projects\ArtyS7_Workshop1\.sdk\launch_scripts\single_application_debug\debugger_hello_world-default.tcl'
+20:22:05 INFO  : Disconnected from the channel tcfchan#3.
+20:22:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:22:08 INFO  : Jtag cable 'Digilent Arty S7 - 50 210352A6C69CA' is selected.
+20:22:08 INFO  : 'jtag frequency' command is executed.
+20:22:08 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty S7 - 50 210352A6C69CA" && level==0 && jtag_device_ctx=="jsn-Arty S7 - 50-210352A6C69CA-0362f093-0"}' command is executed.
+20:22:09 INFO  : FPGA configured successfully with bitstream "E:/Xilinx/Projects/ArtyS7_Workshop1/HelloE14/_ide/bitstream/download.bit"
+20:22:09 INFO  : Context for processor 'microblaze_0' is selected.
+20:22:10 INFO  : Hardware design and registers information is loaded from 'E:/Xilinx/Projects/ArtyS7_Workshop1/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+20:22:10 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:22:10 INFO  : Context for processor 'microblaze_0' is selected.
+20:22:10 INFO  : System reset is completed.
+20:22:13 INFO  : 'after 3000' command is executed.
+20:22:13 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Arty S7 - 50 210352A6C69CA" && level==0 && jtag_device_ctx=="jsn-Arty S7 - 50-210352A6C69CA-0362f093-0"}
+fpga -file E:/Xilinx/Projects/ArtyS7_Workshop1/HelloE14/_ide/bitstream/download.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw E:/Xilinx/Projects/ArtyS7_Workshop1/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+----------------End of Script----------------
+
+20:22:13 INFO  : Launch script is exported to file 'E:\Xilinx\Projects\ArtyS7_Workshop1\.sdk\launch_scripts\single_application_debug\debugger_helloe14-default.tcl'
+20:23:12 INFO  : Disconnected from the channel tcfchan#4.
