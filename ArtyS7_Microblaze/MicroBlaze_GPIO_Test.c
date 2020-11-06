@@ -71,10 +71,12 @@ int main()
     	sleep(1);
     	XGpio_DiscreteWrite(&Gpio_LED2, LED_CHANNEL, 0x1);
         sleep(1);
-
+        
+        
         //For GPIO pushbutton toggling
-//    	Buttons = XGpio_DiscreteRead(&Gpio_LED2, PB_CHANNEL);
-//    	XGpio_DiscreteWrite(&Gpio_LED2, LED_CHANNEL, Buttons);
-//    	usleep(100);
+    	Buttons = XGpio_DiscreteRead(&Gpio_LED2, PB_CHANNEL);
+    	XGpio_DiscreteWrite(&Gpio_LED2, LED_CHANNEL, Buttons);
+    	usleep(100);
+        
     }
 }
