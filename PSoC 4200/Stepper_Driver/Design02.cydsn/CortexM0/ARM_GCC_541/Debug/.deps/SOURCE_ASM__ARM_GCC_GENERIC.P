@@ -1,0 +1,8 @@
+D:/PSoC/Projects/Stepper_Ctrl/Design02.cydsn/CortexM0/ARM_GCC_541/Debug/CyBootAsmGnu.o : D:/PSoC/Projects/Stepper_Ctrl/Design02.cydsn/Generated_Source/PSoC4/CyBootAsmGnu.s D:/PSoC/Projects/Stepper_Ctrl/Design02.cydsn/Generated_Source/PSoC4/cydevicegnu_trm.inc D:/PSoC/Projects/Stepper_Ctrl/Design02.cydsn/Generated_Source/PSoC4/cyfittergnu.inc 
+
+D:/PSoC/Projects/Stepper_Ctrl/Design02.cydsn/Generated_Source/PSoC4/CyBootAsmGnu.s : 
+
+D:/PSoC/Projects/Stepper_Ctrl/Design02.cydsn/Generated_Source/PSoC4/cydevicegnu_trm.inc : 
+
+D:/PSoC/Projects/Stepper_Ctrl/Design02.cydsn/Generated_Source/PSoC4/cyfittergnu.inc : 
+
